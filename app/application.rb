@@ -22,7 +22,6 @@ class Application
     resp.finish
   end
 end
-end
 
 # I don't know why this code won't work, seems to me that
 # it's doing the same thing as the solution ".find"

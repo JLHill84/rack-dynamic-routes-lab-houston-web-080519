@@ -16,6 +16,10 @@ class Application
     end
   end
 end
-  
-  
 end
+
+# I don't know why this code won't work, seems to me that
+# it's doing the same thing as the solution ".find"
+# itemName = req.path.split("/items/").last
+#     if @@items.include?(itemName)
+#         @resp.write "#{itemName.price}"

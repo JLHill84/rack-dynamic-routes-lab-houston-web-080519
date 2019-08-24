@@ -5,7 +5,7 @@ class Application
     req = Rack::Request.new(env)
     
     if req.path.match(/items/<ITEMNAME>)
-      if Item.include?(ITEMNAME)
+      if Item.all.include?(ITEMNAME)
         resp.write "#{ITEMNAME.price}"
       else
         resp.write "Item not found"

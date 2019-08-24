@@ -8,7 +8,7 @@ class Application
     
     if req.path.match(/items/)
      itemName = @req.path.split("/items/").last
-     if Item.all.include?(itemName)
+     if @@items.include?(itemName)
         @resp.write "#{itemName.price}"
     else
       resp.write "Route not found"

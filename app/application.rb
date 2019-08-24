@@ -8,7 +8,8 @@ class Application
     
     if req.path.match(/items/)
      itemName = @req.path.split("/items/").last
-     if 
+     if Item.all.include?(itemName)
+        @resp.write "#{itemName.price}"
     else
       resp.write "Route not found"
       resp.status = 404
@@ -16,13 +17,5 @@ class Application
     
   end
   
-  def checkItems
-      if Item.all.include?(itemName)
-        @resp.write "#{itemName.price}"
-      else
-        @resp.write "Item not found"
-        @resp.status = 400
-      end
-  end
   
 end

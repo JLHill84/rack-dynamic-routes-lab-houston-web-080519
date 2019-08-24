@@ -14,7 +14,6 @@ class Application
   end
   
   def checkItems
-    itemName = @req.path.split("/items/").last
       if Item.all.include?(itemName)
         @resp.write "#{itemName.price}"
       else
